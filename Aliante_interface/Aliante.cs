@@ -8,14 +8,19 @@ namespace Aliante_interface
     public class Aliante : IComponente
     {
         int dim = 0;
-        public IComponente[] componenti = new IComponente[100];
+        public IComponente[] componenti;
+
+        public Aliante()
+        {
+             componenti = new IComponente[100];
+        }
 
         public string Descrizione()
         {
-            string temp = "";
+            string temp = "\n";
             for (int i = 0; i < dim; i++)
             {
-                temp += componenti[i].Descrizione();
+                temp += componenti[i].Descrizione() + "\n";
             }
 
             return temp;

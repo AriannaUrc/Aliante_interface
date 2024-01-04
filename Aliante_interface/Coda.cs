@@ -7,34 +7,35 @@ namespace Aliante_interface
 {
     public class Coda : IComponente
     {
-        public double lunghezza
+        private double _costo;
+        private double _lunghezza;
+        public double costo
         {
-            get => default;
+            get { return _costo; }
             set
             {
                 if (value < 0)
                 {
-                    lunghezza = 0;
+                    _costo = 0;
                 }
                 else
                 {
-                    lunghezza = value;
+                    _costo = value;
                 }
             }
         }
-
-        public double costo
+        public double lunghezza
         {
-            get => default;
+            get { return _lunghezza; }
             set
             {
                 if (value < 0)
                 {
-                    costo = 0;
+                    _lunghezza = 0;
                 }
                 else
                 {
-                    costo = value;
+                    _lunghezza = value;
                 }
             }
         }

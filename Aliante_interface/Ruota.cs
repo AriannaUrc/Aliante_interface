@@ -7,84 +7,107 @@ namespace Aliante_interface
 {
     public class Ruota : IComponente
     {
-        public double lunghezza
+        private double _costo;
+        private double _lunghezza;
+        private double _altezza;
+        private int _pollici_materiale;
+        private double _raggio;
+
+        public double costo
         {
-            get => default;
+            get { return _costo; }
             set
             {
                 if (value < 0)
                 {
-                    lunghezza = 0;
+                    _costo = 0;
                 }
                 else
                 {
-                    lunghezza = value;
+                    _costo = value;
+                }
+            }
+        }
+        public double lunghezza
+        {
+            get { return _lunghezza; }
+            set
+            {
+                if (value < 0)
+                {
+                    _lunghezza = 0;
+                }
+                else
+                {
+                    _lunghezza = value;
                 }
             }
         }
 
         public double altezza
         {
-            get => default;
+            get { return _altezza; }
             set
             {
                 if (value < 0)
                 {
-                    altezza = 0;
+                    _altezza = 0;
                 }
                 else
                 {
-                    altezza = value;
+                    _altezza = value;
                 }
             }
         }
 
         public int pollici_materiale
         {
-            get => default;
+            get { return _pollici_materiale; }
             set
             {
-                if(value < 0)
+                if (value < 0)
                 {
-                    pollici_materiale = 0;
+                    _pollici_materiale = 0;
                 }
                 else
                 {
-                    pollici_materiale = value;
+                    _pollici_materiale = value;
                 }
             }
         }
 
         public double raggio
         {
-            get => default;
+            get { return _raggio; }
             set
             {
-                if(value < 0)
+                if (value < 0)
                 {
-                    raggio = 0;
+                    _raggio = 0;
                 }
                 else
                 {
-                    raggio = value;
+                    _raggio = value;
                 }
             }
         }
 
-        public double costo
+
+        public Ruota()
         {
-            get => default;
-            set
-            {
-                if(value < 0)
-                {
-                    costo = 0;
-                }
-                else
-                {
-                    costo = value;
-                }
-            }
+            this.lunghezza = 0;
+            this.altezza = 0;
+            this.pollici_materiale = 0;
+            this.raggio = 0;
+            this.costo = 0;
+        }
+        public Ruota(double lunghezza, double altezza, int pollici_materiale, double raggio, double costo)
+        {
+            this.lunghezza = lunghezza;
+            this.altezza = altezza;
+            this.pollici_materiale = pollici_materiale;
+            this.raggio = raggio;
+            this.costo = costo;
         }
 
         public string Descrizione()

@@ -7,45 +7,62 @@ namespace Aliante_interface
 {
     public class Fusoliera : IComponente
     {
-        public double lunghezza
+        private double _costo;
+        private double _lunghezza;
+        private string _materiale;
+        public double costo
         {
-            get => default;
+            get { return _costo; }
             set
             {
                 if (value < 0)
                 {
-                    lunghezza = 0;
+                    _costo = 0;
                 }
                 else
                 {
-                    lunghezza = value;
+                    _costo = value;
+                }
+            }
+        }
+        public double lunghezza
+        {
+            get { return _lunghezza; }
+            set
+            {
+                if (value < 0)
+                {
+                    _lunghezza = 0;
+                }
+                else
+                {
+                    _lunghezza = value;
                 }
             }
         }
 
         public string materiale
         {
-            get => default;
+            get { return _materiale; }
             set
             {
-                materiale = value;
+                _materiale = value;
             }
         }
 
-        public double costo
+
+        public Fusoliera()
         {
-            get => default;
-            set
-            {
-                if(value < 0)
-                {
-                    costo = 0;
-                }
-                else
-                {
-                    costo = value;
-                }
-            }
+            lunghezza = 0;
+            materiale = "";
+            costo = 0;
+        }
+
+        public Fusoliera(double lung, string mater, double cost)
+        {
+            lunghezza = lung;
+            materiale = mater;
+            costo = cost;
         }
 
         public string Descrizione()

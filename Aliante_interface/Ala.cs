@@ -8,49 +8,52 @@ namespace Aliante_interface
 {
     public class Ala : IComponente
     {
+        private double _costo;
+        private double _lunghezza;
+        private double _apertura;
         public double costo
         {
-            get => default;
+            get { return _costo; }
             set
             {
                 if (value < 0)
                 {
-                    costo = 0;
+                    _costo = 0;
                 }
                 else
                 {
-                    costo = value;
+                    _costo = value;
                 }
             }
         }
         public double lunghezza
         {
-            get => default;
+            get { return _lunghezza; }
             set
             {
                 if (value < 0)
                 {
-                    lunghezza = 0;
+                    _lunghezza = 0;
                 }
                 else
                 {
-                    lunghezza = value;
+                    _lunghezza = value;
                 }
             }
         }
 
         public double apertura
         {
-            get => default;
+            get {return _apertura;}
             set
             {
                 if(value < 0)
                 {
-                    apertura = 0;
+                    _apertura = 0;
                 }
                 else
                 {
-                    apertura = value;
+                    _apertura = value;
                 }
             }
         }
@@ -67,11 +70,11 @@ namespace Aliante_interface
             costo = 0;
         }
 
-        public Ala(double lunghezza, double apertura, double costo)
+        public Ala(double lung, double aper, double cost)
         {
-            this.lunghezza = lunghezza;
-            this.apertura = apertura;
-            this.costo = costo;
+            lunghezza = lung;
+            apertura = aper;
+            costo = cost;
         }
         public void Add(IComponente comp)
         {
