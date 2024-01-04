@@ -12,6 +12,14 @@ namespace Aliante_interface
             get => default;
             set
             {
+                if (value < 0)
+                {
+                    lunghezza = 0;
+                }
+                else
+                {
+                    lunghezza = value;
+                }
             }
         }
 
@@ -20,6 +28,7 @@ namespace Aliante_interface
             get => default;
             set
             {
+                materiale = value;
             }
         }
 
@@ -28,18 +37,22 @@ namespace Aliante_interface
             get => default;
             set
             {
+                if(value < 0)
+                {
+                    costo = 0;
+                }
+                else
+                {
+                    costo = value;
+                }
             }
         }
 
         public string Descrizione()
         {
-            throw new System.NotImplementedException();
+            return "\nFusoliera\n-lunghezza: " + lunghezza + "\n-materiale: "+ materiale + "\n-costo: " + costo;
         }
 
-        public double Costo()
-        {
-            throw new System.NotImplementedException();
-        }
         public void Add(IComponente comp)
         {
             throw new System.NotImplementedException();

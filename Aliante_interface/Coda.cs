@@ -7,11 +7,19 @@ namespace Aliante_interface
 {
     public class Coda : IComponente
     {
-        public double lughezza
+        public double lunghezza
         {
             get => default;
             set
             {
+                if (value < 0)
+                {
+                    lunghezza = 0;
+                }
+                else
+                {
+                    lunghezza = value;
+                }
             }
         }
 
@@ -20,18 +28,35 @@ namespace Aliante_interface
             get => default;
             set
             {
+                if (value < 0)
+                {
+                    costo = 0;
+                }
+                else
+                {
+                    costo = value;
+                }
             }
         }
 
-        public string Descrizione()
+        public Coda()
         {
-            throw new System.NotImplementedException();
+            costo = 0;
+            lunghezza = 0;
         }
 
-        public double Costo()
+        public Coda(double lunghezza, double costo)
         {
-            throw new System.NotImplementedException();
+            this.costo = costo;
+            this.lunghezza = lunghezza;
         }
+
+
+        public string Descrizione()
+        {
+            return "\nCoda\n-lunghezza: " + lunghezza + "\n-costo: " + costo;
+        }
+
         public void Add(IComponente comp)
         {
             throw new System.NotImplementedException();

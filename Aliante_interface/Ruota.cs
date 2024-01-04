@@ -12,6 +12,14 @@ namespace Aliante_interface
             get => default;
             set
             {
+                if (value < 0)
+                {
+                    lunghezza = 0;
+                }
+                else
+                {
+                    lunghezza = value;
+                }
             }
         }
 
@@ -20,6 +28,14 @@ namespace Aliante_interface
             get => default;
             set
             {
+                if (value < 0)
+                {
+                    altezza = 0;
+                }
+                else
+                {
+                    altezza = value;
+                }
             }
         }
 
@@ -28,6 +44,14 @@ namespace Aliante_interface
             get => default;
             set
             {
+                if(value < 0)
+                {
+                    pollici_materiale = 0;
+                }
+                else
+                {
+                    pollici_materiale = value;
+                }
             }
         }
 
@@ -36,6 +60,14 @@ namespace Aliante_interface
             get => default;
             set
             {
+                if(value < 0)
+                {
+                    raggio = 0;
+                }
+                else
+                {
+                    raggio = value;
+                }
             }
         }
 
@@ -44,18 +76,22 @@ namespace Aliante_interface
             get => default;
             set
             {
+                if(value < 0)
+                {
+                    costo = 0;
+                }
+                else
+                {
+                    costo = value;
+                }
             }
         }
 
         public string Descrizione()
         {
-            throw new System.NotImplementedException();
+            return "\nFusoliera\n-lunghezza: " + lunghezza + "\n-altezza: " + altezza + "\n-pollici_materiale: " + pollici_materiale + "\n-raggio: " + raggio + "\n-costo: " + costo;
         }
 
-        public double Costo()
-        {
-            throw new System.NotImplementedException();
-        }
         public void Add(IComponente comp)
         {
             throw new System.NotImplementedException();

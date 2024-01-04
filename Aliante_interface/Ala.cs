@@ -30,11 +30,11 @@ namespace Aliante_interface
             {
                 if (value < 0)
                 {
-                    apertura = 0;
+                    lunghezza = 0;
                 }
                 else
                 {
-                    apertura = value;
+                    lunghezza = value;
                 }
             }
         }
@@ -57,7 +57,7 @@ namespace Aliante_interface
 
         public string Descrizione()
         {
-            return "\nRuota\n-lunghezza: " + lunghezza + "\n-apertura: " + apertura;
+            return "\nAla\n-lunghezza: " + lunghezza + "\n-apertura: " + apertura;
         }
 
         public Ala()
