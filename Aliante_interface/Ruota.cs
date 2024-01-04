@@ -105,5 +105,10 @@ namespace Aliante_interface
         {
             throw new System.NotImplementedException();
         }
+
+        public double Costo()
+        {
+            return costo;
+        }
     }
 }

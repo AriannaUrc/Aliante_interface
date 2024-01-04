@@ -10,5 +10,7 @@ namespace Aliante_interface
         void Add(IComponente comp);
         void Remove(int pos);
         IComponente getChild(int pos);
+        double Costo();
+        string Descrizione();
     }
 }

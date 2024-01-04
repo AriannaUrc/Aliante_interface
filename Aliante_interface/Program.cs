@@ -10,6 +10,9 @@ namespace Aliante_interface
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Inserisci informazioni Ala: ");
+
+
         }
     }
 }

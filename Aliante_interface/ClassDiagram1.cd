@@ -27,7 +27,7 @@
   <Class Name="Aliante_interface.Coda">
     <Position X="7.75" Y="5.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ABIAAAAAIAAAACCAAAAABAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>ABIAAAAAIAAEACAAAAAABAACAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Coda.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -43,7 +43,7 @@
   <Class Name="Aliante_interface.Ala">
     <Position X="13.5" Y="5.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ABIAAAAAIBAEAAAAAAAABAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>ABIAAAAAIBAEACAAAAAABAACAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Ala.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -51,7 +51,7 @@
   <Interface Name="Aliante_interface.IComponente">
     <Position X="8.25" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAIAAAAAAAAAAAAAAAAABAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>ABIAAAAAAAAAACAAAAAABAACAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>IComponente.cs</FileName>
     </TypeIdentifier>
   </Interface>

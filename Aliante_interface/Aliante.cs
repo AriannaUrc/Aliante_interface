@@ -12,12 +12,24 @@ namespace Aliante_interface
 
         public string Descrizione()
         {
-            throw new System.NotImplementedException();
+            string temp = "";
+            for (int i = 0; i < dim; i++)
+            {
+                temp += componenti[i].Descrizione();
+            }
+
+            return temp;
         }
 
         public double Costo()
         {
-            throw new System.NotImplementedException();
+            double temp = 0;
+            for (int i = 0; i < dim; i++) 
+            {
+                temp += componenti[i].Costo();
+            }
+
+            return temp;
         }
 
         public void Add(IComponente comp)
