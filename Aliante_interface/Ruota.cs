@@ -112,7 +112,7 @@ namespace Aliante_interface
 
         public string Descrizione()
         {
-            return "\nFusoliera\n-lunghezza: " + lunghezza + "\n-altezza: " + altezza + "\n-pollici_materiale: " + pollici_materiale + "\n-raggio: " + raggio + "\n-costo: " + costo;
+            return "\nRuota\n-lunghezza: " + lunghezza + "\n-altezza: " + altezza + "\n-pollici_materiale: " + pollici_materiale + "\n-raggio: " + raggio + "\n-costo: " + costo;
         }
 
         public void Add(IComponente comp)
