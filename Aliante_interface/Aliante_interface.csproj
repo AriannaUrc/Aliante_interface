@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Ala.cs" />
     <Compile Include="Aliante.cs" />
+    <Compile Include="Cerchione.cs" />
     <Compile Include="Coda.cs" />
     <Compile Include="Fusoliera.cs" />
     <Compile Include="IComponente.cs" />
@@ -55,6 +56,7 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="ClassDiagram1.cd" />
+    <Compile Include="Gomma.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

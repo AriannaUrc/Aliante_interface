@@ -13,6 +13,10 @@ namespace Aliante_interface
         private int _pollici_materiale;
         private double _raggio;
 
+        int dim = 0;
+        public List<IComponente> componenti;
+
+
         public double costo
         {
             get { return _costo; }
@@ -95,43 +99,49 @@ namespace Aliante_interface
 
         public Ruota()
         {
-            this.lunghezza = 0;
-            this.altezza = 0;
-            this.pollici_materiale = 0;
-            this.raggio = 0;
-            this.costo = 0;
-        }
-        public Ruota(double lunghezza, double altezza, int pollici_materiale, double raggio, double costo)
-        {
-            this.lunghezza = lunghezza;
-            this.altezza = altezza;
-            this.pollici_materiale = pollici_materiale;
-            this.raggio = raggio;
-            this.costo = costo;
-        }
-
-        public string Descrizione()
-        {
-            return "\nRuota\n-lunghezza: " + lunghezza + "\n-altezza: " + altezza + "\n-pollici_materiale: " + pollici_materiale + "\n-raggio: " + raggio + "\n-costo: " + costo;
-        }
-
-        public void Add(IComponente comp)
-        {
-            throw new System.NotImplementedException();
-        }
-        public void Remove(int pos)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public IComponente getChild(int pos)
-        {
-            throw new System.NotImplementedException();
+            componenti = new List<IComponente>();
         }
 
         public double Costo()
         {
-            return costo;
+            double temp = 0;
+            for (int i = 0; i < dim; i++)
+            {
+                temp += componenti[i].Costo();
+            }
+
+            return temp;
+        }
+
+        public string Descrizione()
+        {
+            string temp = "\nRuota: \n";
+            for (int i = 0; i < dim; i++)
+            {
+                temp += componenti[i].Descrizione() + "\n";
+            }
+
+            return temp;
+        }
+
+        public void Add(IComponente comp)
+        {
+            componenti.Add(comp);
+            dim++;
+        }
+        public void Remove(int pos)
+        {
+            for (int i = pos + 1; i < dim; i++)
+            {
+                componenti[i - 1] = componenti[i];
+            }
+            componenti.RemoveAt(dim - 1);
+            dim--;
+        }
+
+        public IComponente getChild(int pos)
+        {
+            return componenti[pos];
         }
     }
 }
