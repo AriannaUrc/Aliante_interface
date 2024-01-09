@@ -12,7 +12,7 @@ namespace Aliante_interface
 
         public Aliante()
         {
-             componenti = new List<IComponente>(100);
+             componenti = new List<IComponente>();
         }
 
         public string Descrizione()
@@ -39,7 +39,7 @@ namespace Aliante_interface
 
         public void Add(IComponente comp)
         {
-            componenti[dim] = comp;
+            componenti.Add(comp);
             dim++;
         }
         public void Remove(int pos)
@@ -48,6 +48,7 @@ namespace Aliante_interface
             {
                 componenti[i-1] = componenti[i];
             }
+            componenti.RemoveAt(dim-1);
             dim--;
         }
 
